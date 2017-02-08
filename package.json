@@ -1,5 +1,5 @@
 {
-  "name": "28_intro_redux",
+  "name": "30_connect_and_map_dispatch",
   "version": "1.0.0",
   "description": "A tutorial based on Dan Abramov's Egghead.io course",
   "main": "src/index.js",

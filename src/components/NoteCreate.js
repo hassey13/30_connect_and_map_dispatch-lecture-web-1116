@@ -1,7 +1,6 @@
 import React from 'react'
 
-import {addNote} from '../actions'
-
+import { addNote } from '../actions'
 
 class NoteCreate extends React.Component {
 
