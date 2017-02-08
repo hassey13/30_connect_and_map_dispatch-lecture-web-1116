@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import { addNote } from '../actions'
 
@@ -17,12 +18,12 @@ class NoteCreate extends React.Component {
 
   handleSubmit(event){
     event.preventDefault()
-    let action = addNote(this.state.note)
-    this.context.store.dispatch( action )
+    this.props.addNote( this.state.note )
     this.setState({note: ''})
   }
 
   render(){
+    console.log("Rendering the form...")
     return (
       <div>
         <h3>Add a Note</h3>
@@ -34,4 +35,13 @@ class NoteCreate extends React.Component {
   }
 }
 
-export default NoteCreate
+function mapDispatchToProps( dispatch ){
+  return {
+    addNote: function(note){
+      let action = addNote( note )
+      dispatch( action )
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)( NoteCreate )

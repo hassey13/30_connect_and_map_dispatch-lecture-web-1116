@@ -12,12 +12,6 @@ import { Provider } from 'react-redux'
 
 const store = createStore(rootReducer);
 
-store.dispatch(addNote('React'))
-store.dispatch(addNote('Redux'))
-store.dispatch(addNote('Dan Abramov, our good friend'))
-
-
-
 ReactDOM.render( <Provider store={store}>
-  <App />
+  <App  />
 </Provider>, document.getElementById('container'));
